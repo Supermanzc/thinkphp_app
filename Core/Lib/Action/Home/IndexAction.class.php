@@ -2,6 +2,6 @@
 class IndexAction extends Action{
 	
 	public function index(){
-		$this->show('home?index');
+		$this->display();
 	}
 }
