@@ -5,7 +5,7 @@ return array(
 	'APP_GROUP_LIST'=>'Home,Admin,Common', //分组
 	'DEFAULT_GROUP'=>'Home', //默认分组
 	
-	'LOAD_EXT_CONFIG'=>'db', //添加数据库配置
+	'LOAD_EXT_CONFIG'=>'db,info', //添加数据库配置
 
 	'TMPL_L_DELIM'=>'<{', //左定界符
 	'TMPL_R_DELIM'=>'}>', //又定界符
