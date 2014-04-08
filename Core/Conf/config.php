@@ -10,6 +10,6 @@ return array(
 	'TMPL_L_DELIM'=>'<{', //左定界符
 	'TMPL_R_DELIM'=>'}>', //又定界符
 	
-	'URL_MODEL'=>1, //0普通模式,1 pathinfo模式, 2
+	'URL_MODEL'=>0, //0普通模式,1 pathinfo模式, 2
 );
 ?>

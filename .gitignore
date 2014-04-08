@@ -6,7 +6,7 @@ gen/
 #idea
 .idea/
 
-statics/upload/
+statics/Upload/*
 #runtime
 Core/Runtime/*
 Core/Runtime/cache/*

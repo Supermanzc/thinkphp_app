@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>kindeditor</title>
+<link rel="stylesheet" type="text/css" href="__ROOT__/Statics/kindeditor/themes/default/default.css" media="all" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/Statics/kindeditor/plugins/code/prettify.css" media="all" />
+<script type="text/javascript" src="__ROOT__/Statics/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/Statics/kindeditor/kindeditor.js"></script>
+<script type="text/javascript" src="__ROOT__/Statics/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="__ROOT__/Statics/kindeditor/plugins/code/prettify.js"></script>
+<script>
+KindEditor.ready(function(K){
+	var editor = K.editor({
+		allowFileManager:true
+	});
+	K('#upload').click(function() {
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				fileUrl : K('#pic').val(),
+				clickFn : function(url, title) {
+					if(url.indexOf("http") > -1){
+						K('#pic').val(url);
+					}else{
+						K('#pic').val("<{:C('site_url')}>"+url);
+					}
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+});
+</script>
+</head>
+<body>
+<form method="post"   action=""  enctype="multipart/form-data" > 
+	<input type="text"  name="picurl"  id="pic" value=""   class="px" tabindex="1" size="80" readonly="readonly">
+	<span class="ke-button-common" id="upload" style="margin-top: 3px;margin-left: 5px;">
+		<input type="button" class="ke-button-common ke-button" value="Upload">
+	</span>
+</form>
+</body>
+</html>
+
