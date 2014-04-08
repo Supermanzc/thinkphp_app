@@ -2,8 +2,8 @@
 require_once 'JSON.php';
 $php_path = dirname(__FILE__) . '/';
 $php_url = dirname($_SERVER['PHP_SELF']) . '/';
-$save_path = $php_path . '../../../../Uploads/';//上传的磁盘地址,磁盘路劲
-$save_url = '/Uploads/';//访问时的网络地址
+$save_path = $php_path . '../../../Statics/Uploads/';//上传的磁盘地址,磁盘路劲
+$save_url = '/Statics/Uploads/';//访问时的网络地址
 $ext_arr = array(
 	'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp','pdf'),
 	'flash' => array('swf', 'flv'),
